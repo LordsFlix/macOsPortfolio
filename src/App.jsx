@@ -1,10 +1,11 @@
-import { Welcome, Navbar } from "#components"
+import { Welcome, Navbar, Dock } from "#components"
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Welcome />
+      <Dock />
     </div>
   )
 }
