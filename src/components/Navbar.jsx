@@ -1,10 +1,18 @@
-import { navItems, navIcons } from "#constants";
+import { navItems, navIcons, locations } from "#constants";
 import useWindowStore from "#store/Windows";
+import useLocationStore from "#store/Location";
 import dayjs from "dayjs";
 
 const Navbar = () => {
+    const { openWindow } = useWindowStore()
+    const { setActiveLocation } = useLocationStore()
 
-    const {openWindow} = useWindowStore()
+    const handleNavClick = (item) => {
+        if (item.location && locations[item.location]) {
+            setActiveLocation(locations[item.location])
+        }
+        openWindow(item.type)
+    }
 
     return (
         <nav>
@@ -13,7 +21,7 @@ const Navbar = () => {
                 <p className="font-bold">Shaurya's Portfolio</p>
                 <ul>
                     {navItems.map((item) => (
-                        <li key={item.id} onClick={() => openWindow(item.type)}>
+                        <li key={item.id} onClick={() => handleNavClick(item)}>
                             <p>{item.name}</p>
                         </li>
                     ))}

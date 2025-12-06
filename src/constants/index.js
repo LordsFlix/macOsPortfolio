@@ -1,7 +1,7 @@
 export const navItems = [
-  { id: 1, name: 'Projects', type: 'finder' },
-  { id: 2, name: 'Contact', type: 'contact' },
-  { id: 3, name: 'Resume', type: 'resume' }
+  { id: 1, name: 'Projects', type: 'finder', location: 'work' },
+  { id: 2, name: 'Contact', type: 'contact', location: '' },
+  { id: 3, name: 'Resume', type: 'resume', location: '' }
 ]
 
 const navIcons = [
@@ -32,15 +32,15 @@ const dockApps = [
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Articles (Currently Unavailable)", // was "Safari"
     icon: "safari.png",
-    canOpen: true,
+    canOpen: false,
   },
   {
     id: "photos",
-    name: "Gallery", // was "Photos"
+    name: "Gallery (Currently Unavailable)", // was "Photos"
     icon: "photos.png",
-    canOpen: true,
+    canOpen: false,
   },
   {
     id: "contact",
@@ -55,10 +55,10 @@ const dockApps = [
     canOpen: true,
   },
   {
-    id: "trash",
+    id: "finder",
     name: "Archive", // was "Trash"
     icon: "trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
