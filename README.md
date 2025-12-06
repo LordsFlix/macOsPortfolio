@@ -1,16 +1,106 @@
-# React + Vite
+# 🍎 MacOS Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A fully interactive, macOS-inspired portfolio website built with modern web technologies.
 
-Currently, two official plugins are available:
+![MacOS Portfolio Banner](/public/images/pss.png)
+_(Replace the above image path with a representative screenshot of your actual desktop view if available)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Introduction
 
-## React Compiler
+Welcome to my personal portfolio, reimagined as a **MacOS Desktop Environment**. This project showcases my skills, projects, and experience in a unique, interactive way. Users can open apps, drag windows, browse my "files," and even use a functional terminal, all within the browser.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It mimics the look and feel of macOS with smooth animations, a functional dock, and an intuitive window management system.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Built with the latest and greatest in the frontend ecosystem:
+
+- **Library**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite 7](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Animations**: [GSAP](https://gsap.com/)
+- **Icons**: [Lucide React](https://lucide.dev/) & Custom SVG assets
+
+## ✨ Features
+
+- **🖥️ Interactive Desktop**: complete with a top bar and wallpaper.
+- **⚓ Dynamic Dock**: Features magnification effects and bouncing animations on hover/click.
+- **🪟 Window Management**:
+  - **Draggable**: Move windows anywhere on the screen.
+  - **Resizable**: Resize windows to your liking.
+  - **Z-Indexing**: Active windows always come to the front.
+  - **Minimize/Maximize/Close**: Fully functional Mac-style window controls.
+- **📂 Functional Apps**:
+  - **Finder (Portfolio)**: Browse my projects and "files" in a directory structure.
+  - **Terminal (Skills)**: A command-line interface to explore my technical skills.
+  - **Contact**: A clean interface to get in touch.
+  - **Trash (Archive)**: See what's been discarded (or archived projects).
+  - **About Me**: A quick look at who I am.
+- **📱 Responsive Design**: Optimized for various screen sizes (best viewed on desktop for the full experience).
+
+## 📦 Getting Started
+
+Follow these steps to run the project locally on your machine.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (Latest LTS recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone https://github.com/LordsFlix/macOsPortfolio.git
+    cd macOsPortfolio
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in Browser**
+    Visit `http://localhost:5173` (or the URL shown in your terminal).
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/      # React components (Dock, Windows, Apps)
+├── constants/       # Data for apps, menu items, and content
+├── HOC/            # Higher-Order Components (e.g., WindowWrapper)
+├── store/           # Zustand stores for state management
+└── windows/         # Individual app window contents
+```
+
+## 🎨 Customization
+
+The project is driven by configuration files, making it easy to update content without diving deep into component logic.
+
+- **Personal Data**: Edit `src/constants/index.js` to update:
+  - `navItems`: Top bar menu items.
+  - `dockApps`: Apps appearing in the dock.
+  - `techStack`, `socials`, `blogPosts`: Content for specific apps.
+  - `locations`: File system structure for the Finder app.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/LordsFlix">Shaurya</a>
+</p>
