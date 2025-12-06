@@ -1,7 +1,7 @@
 export const navItems = [
-  { id: 1, name: 'Portfolio' },
-  { id: 2, name: 'Contact' },
-  { id: 3, name: 'Projects' }
+  { id: 1, name: 'Projects', type: 'finder' },
+  { id: 2, name: 'Contact', type: 'contact' },
+  { id: 3, name: 'Resume', type: 'resume' }
 ]
 
 const navIcons = [
