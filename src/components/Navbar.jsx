@@ -6,6 +6,8 @@ const Navbar = () => {
 
     const {openWindow} = useWindowStore()
 
+    
+
     return (
         <nav>
             <div>
